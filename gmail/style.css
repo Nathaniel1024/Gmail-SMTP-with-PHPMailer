@@ -1,0 +1,152 @@
+/* Apply box-sizing and transition to all elements */
+* {
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Define light theme colors */
+:root {
+    --bg-primary: #f4f4f4;
+    --bg-secondary: white;
+    --text-primary: #333;
+    --text-secondary: white;
+    --border-color: #ddd;
+    --accent-color: #4CAF50;
+    --accent-hover: #45a049;
+}
+
+/* Define dark theme colors */
+.dark-theme {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: white;
+    --border-color: #444;
+    --accent-color: #4CAF50;
+    --accent-hover: #45a049;
+}
+
+/* Style for the body element */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 15px;
+}
+
+/* Style for the form container */
+.form-container {
+    background-color: var(--bg-secondary);
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Style for the theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Style for email input */
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: left;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Style for submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive styles for larger screens */
+@media screen and (min-width: 768px) {
+    .form-container {
+        max-width: 450px;
+        padding: 30px;
+    }
+
+    input[type="email"], 
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 18px;
+    }
+}
+
+/* Focus style for email input */
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Hover style for submit button */
+input[type="submit"]:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Style for social links container */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for GitHub icon */
+.github-icon {
+    color: var(--text-primary);
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover style for GitHub icon */
+.github-icon:hover {
+    color: var(--accent-color);
+}
+
+/* Dark theme adaptation for GitHub icon */
+.dark-theme .github-icon {
+    color: var(--text-secondary);
+}
